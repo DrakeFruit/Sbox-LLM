@@ -1,0 +1,27 @@
+ChatUI
+{
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	right: 10%;
+	bottom: 0;
+	pointer-events: all;
+	color: white;
+	font-family: Poppins;
+	font-size: 32px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.output, .inputText{
+		width: 95%;
+		padding-left: 1%;
+	}
+	.output{
+		background-color: rgba(rgb(53, 62, 69), .9);
+		overflow: scroll;
+	}
+	.inputText{
+		background-color: rgba(rgb(29, 34, 40), .9);
+	}
+}

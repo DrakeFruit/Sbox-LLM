@@ -1,0 +1,35 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System;
+@inherits PanelComponent
+
+<root>
+	<div class="output">@output</div>
+	<textentry class="inputText" @ref="inputText" onsubmit=@SendInput placeholder="text here!"></textentry>
+</root>
+
+@code
+{
+	Chat chat = new();
+
+	TextEntry inputText;
+	String output;
+	TimeSince timeAwaited;
+	bool waiting = false;
+
+	protected override int BuildHash() => System.HashCode.Combine( output );
+
+	protected override void OnUpdate(){
+		if(waiting){
+			output = "Waiting for response... " + (int)timeAwaited.Relative + "S";
+		}
+	}
+
+	public async void SendInput(){
+		waiting = true;
+		timeAwaited = 0;
+		await chat.SendInput(inputText.Text);
+		waiting = false;
+		output = chat.completion;
+	}
+}
