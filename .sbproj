@@ -1,7 +1,7 @@
 {
-  "Title": "LLM",
+  "Title": "Talk To AI",
   "Type": "game",
-  "Org": "local",
+  "Org": "drakefruit",
   "Ident": "llm",
   "Tags": null,
   "Schema": 1,

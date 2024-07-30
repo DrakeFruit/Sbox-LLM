@@ -4,7 +4,6 @@ ChatUI
 	top: 60%;
 	left: 10%;
 	right: 10%;
-	bottom: 0;
 	pointer-events: all;
 	color: white;
 	font-family: Poppins;
@@ -15,11 +14,13 @@ ChatUI
 
 	.output, .inputText{
 		width: 95%;
-		padding-left: 1%;
+		padding-left: 2%;
+		padding-right: 2%;
 	}
 	.output{
 		background-color: rgba(rgb(53, 62, 69), .9);
-		overflow: scroll;
+		min-height: 200px;
+		overflow-y: scroll;
 	}
 	.inputText{
 		background-color: rgba(rgb(29, 34, 40), .9);

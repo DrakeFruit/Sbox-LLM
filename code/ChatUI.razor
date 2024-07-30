@@ -11,7 +11,6 @@
 @code
 {
 	Chat chat = new();
-
 	TextEntry inputText;
 	String output;
 	TimeSince timeAwaited;
@@ -28,7 +27,8 @@
 	public async void SendInput(){
 		waiting = true;
 		timeAwaited = 0;
-		await chat.SendInput(inputText.Text);
+		await chat.SendInput(inputText.Text, chat.system_prompt);
+		inputText.Text = "";
 		waiting = false;
 		output = chat.completion;
 	}

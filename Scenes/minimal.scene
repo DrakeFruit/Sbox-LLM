@@ -98,6 +98,13 @@
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
+        },
+        {
+          "__type": "Chat",
+          "system_prompt": "adadadadwadaw"
+        },
+        {
+          "__type": "ChatUI"
         }
       ]
     }
@@ -125,6 +132,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-16T10:38:14.9058493-08:00",
+  "LastSaved": "2024-02-16T21:41:24.2279415-08:00",
   "__references": []
 }
